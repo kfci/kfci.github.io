@@ -1,0 +1,18 @@
+﻿이 폴더에 아래 파일명으로 사진을 넣으면 홈페이지에 자동으로 표시됩니다.
+(사진이 없으면 브랜드 컬러 일러스트가 대신 표시됩니다)
+
+[전문가 프로필 사진]
+expert-ham.jpg     - 함주연 소장 (노란 자켓, 진주 귀걸이, 앉은 사진)
+expert-kim-hr.jpg  - 김혜령 수석상담사 (노란 자켓, 리본 목걸이)
+expert-kim-hd.jpg  - 김해든 상담사 (노란 자켓, 명찰 착용)
+advisor-han.jpg    - 한유진 교수 (보라색 블라우스)
+
+[메인 화면 사진]
+hero-couple.jpg    - 좌측: 30대 커플 사진
+hero-family.jpg    - 우측: 청소년과 부모가 웃고 있는 사진
+
+[상담 분야 카드 사진]
+program-couple.jpg   - 부부상담
+program-family.jpg   - 가족상담
+program-child.jpg    - 아동·청소년 상담
+program-personal.jpg - 개인상담·심리검사
