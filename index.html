@@ -94,9 +94,10 @@
   .logo-text { display: flex; flex-direction: column; line-height: 1.25; }
   .logo-text strong { font-family: var(--serif); font-size: 1.04rem; font-weight: 700; color: var(--teal-deep); letter-spacing: 0.01em; }
   .logo-text span { font-size: 0.7rem; color: var(--rose); font-weight: 600; letter-spacing: 0.18em; }
-  .nav-links { display: flex; align-items: center; gap: 30px; list-style: none; }
+  .nav-links { display: flex; align-items: center; gap: 32px; list-style: none; flex: 1; margin-left: 48px; }
   .nav-links a { font-size: 0.94rem; font-weight: 600; transition: color .2s; }
   .nav-links a:hover { color: var(--teal); }
+  .nav-cta { display: flex; align-items: center; gap: 10px; }
   .nav .btn { padding: 10px 22px; font-size: 0.86rem; border-radius: 10px; }
   .menu-toggle { display: none; background: none; border: none; font-size: 1.6rem; color: var(--teal); cursor: pointer; }
 
@@ -358,6 +359,8 @@
     .nav-links li { width: 100%; }
     .nav-links a { display: block; padding: 12px 4px; }
     .menu-toggle { display: block; }
+    .nav-cta .btn-outline { display: none; }
+    .nav-cta .btn { padding: 9px 16px; font-size: 0.8rem; }
     section { padding: 64px 0; }
     .programs, .steps { grid-template-columns: 1fr; }
     .hero-grid { grid-template-columns: 1fr; }
@@ -380,8 +383,11 @@
       <li><a href="#experts">전문가 소개</a></li>
       <li><a href="#reviews">리뷰</a></li>
       <li><a href="#location">오시는 길</a></li>
-      <li><a class="btn btn-rose" href="https://map.naver.com/p/entry/place/1062803314?placePath=%2Fticket%3Fentry%3Dplt%26from%3Dmap%26fromPanelNum%3D1%26additionalHeight%3D76%26timestamp%3D202607171624%26locale%3Dko%26svcName%3Dmap_pcv5&amp;searchType=place&amp;lng=127.0453609&amp;lat=37.5038069&amp;c=15.00,0,0,0,dh" target="_blank" rel="noopener">네이버 예약</a></li>
     </ul>
+    <div class="nav-cta">
+      <a class="btn btn-outline" href="https://map.naver.com/p/entry/place/1062803314?placePath=%2Fticket%3Fentry%3Dplt%26from%3Dmap%26fromPanelNum%3D1%26additionalHeight%3D76%26timestamp%3D202607171624%26locale%3Dko%26svcName%3Dmap_pcv5&amp;searchType=place&amp;lng=127.0453609&amp;lat=37.5038069&amp;c=15.00,0,0,0,dh" target="_blank" rel="noopener">예약하기</a>
+      <a class="btn btn-rose" href="https://talk.naver.com/ct/w5wr4z?frm=mnmb&amp;frm=nmb_detail#nafullscreen" target="_blank" rel="noopener">실시간 상담문의</a>
+    </div>
     <button class="menu-toggle" id="menuToggle" aria-label="메뉴 열기">☰</button>
   </div>
 </header>
@@ -405,7 +411,6 @@
         <path d="M189 224 q14 11 28 0" fill="none" stroke="#4a3a33" stroke-width="4" stroke-linecap="round"/>
       </svg>
       <img src="images/hero-couple.jpg" alt="부부·커플 상담" onerror="this.remove()">
-      <span class="caption">부부 · 커플 상담</span>
     </div>
 
     <!-- 중앙 텍스트 -->
@@ -415,8 +420,8 @@
       <p class="lead">부부·가족·아동청소년·개인 상담 전문.
          수많은 분들이 변화를 경험한 진심 어린 상담으로 당신의 마음을 응원합니다.</p>
       <div class="hero-cta">
-        <a class="btn btn-primary" href="https://map.naver.com/p/entry/place/1062803314?placePath=%2Fticket%3Fentry%3Dplt%26from%3Dmap%26fromPanelNum%3D1%26additionalHeight%3D76%26timestamp%3D202607171624%26locale%3Dko%26svcName%3Dmap_pcv5&amp;searchType=place&amp;lng=127.0453609&amp;lat=37.5038069&amp;c=15.00,0,0,0,dh" target="_blank" rel="noopener">네이버 예약하기</a>
-        <a class="btn btn-outline" href="#about">연구소 둘러보기</a>
+        <a class="btn btn-primary" href="https://map.naver.com/p/entry/place/1062803314?placePath=%2Fticket%3Fentry%3Dplt%26from%3Dmap%26fromPanelNum%3D1%26additionalHeight%3D76%26timestamp%3D202607171624%26locale%3Dko%26svcName%3Dmap_pcv5&amp;searchType=place&amp;lng=127.0453609&amp;lat=37.5038069&amp;c=15.00,0,0,0,dh" target="_blank" rel="noopener">예약하기</a>
+        <a class="btn btn-outline" href="https://talk.naver.com/ct/w5wr4z?frm=mnmb&amp;frm=nmb_detail#nafullscreen" target="_blank" rel="noopener">실시간 상담문의</a>
       </div>
       <p class="hero-note">네이버 플레이스에서 상담 일정을 바로 예약하실 수 있습니다.</p>
     </div>
@@ -435,7 +440,6 @@
         <path d="M201 264 q13 10 26 0" fill="none" stroke="#3d3430" stroke-width="4" stroke-linecap="round"/>
       </svg>
       <img src="images/hero-family.jpg" alt="부모와 청소년 상담" onerror="this.remove()">
-      <span class="caption">아동 · 청소년 상담</span>
     </div>
 
   </div>
@@ -836,10 +840,13 @@
 <section>
   <div class="container">
     <div class="cta-banner">
-      <h2>당신의 마음을, 진심으로 응원합니다</h2>
-      <p>마음의 변화를 함께 만들어가는 든든한 동반자.<br>
+      <h2>첫 심리상담은<br>부담없는 가격으로</h2>
+      <p>첫 방문 내담자분들께 '마음지원금'을 지원해드립니다.<br>
          네이버 플레이스에서 원하시는 날짜와 시간을 간편하게 예약하세요.</p>
-      <a class="btn btn-white" href="https://map.naver.com/p/entry/place/1062803314?placePath=%2Fticket%3Fentry%3Dplt%26from%3Dmap%26fromPanelNum%3D1%26additionalHeight%3D76%26timestamp%3D202607171624%26locale%3Dko%26svcName%3Dmap_pcv5&amp;searchType=place&amp;lng=127.0453609&amp;lat=37.5038069&amp;c=15.00,0,0,0,dh" target="_blank" rel="noopener">네이버 예약 바로가기</a>
+      <div style="display:flex; gap:12px; justify-content:center; flex-wrap:wrap; position:relative; z-index:1;">
+        <a class="btn btn-white" href="https://map.naver.com/p/entry/place/1062803314?placePath=%2Fticket%3Fentry%3Dplt%26from%3Dmap%26fromPanelNum%3D1%26additionalHeight%3D76%26timestamp%3D202607171624%26locale%3Dko%26svcName%3Dmap_pcv5&amp;searchType=place&amp;lng=127.0453609&amp;lat=37.5038069&amp;c=15.00,0,0,0,dh" target="_blank" rel="noopener">예약하기</a>
+        <a class="btn btn-rose" href="https://talk.naver.com/ct/w5wr4z?frm=mnmb&amp;frm=nmb_detail#nafullscreen" target="_blank" rel="noopener">실시간 상담문의</a>
+      </div>
     </div>
   </div>
 </section>
@@ -848,9 +855,9 @@
 <footer>
   <div class="container footer-inner">
     <div class="footer-brand">
-      <strong>한국가족소통연구소 심리상담센터 강남점</strong>
-      <p>서울특별시 강남구 테헤란로 313, 성지하이츠1 1609호<br>
-         이메일: seokikoo@gmail.com</p>
+      <strong>한국가족소통연구소 심리상담센터</strong>
+      <p>대표 함주연 | 사업자번호 638-40-01381<br>
+         서울특별시 강남구 테헤란로 313, 성지하이츠1 1609호</p>
     </div>
     <div class="sns">
       <a href="https://naver.me/GCvqX696" target="_blank" rel="noopener">네이버 플레이스</a>
