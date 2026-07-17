@@ -135,7 +135,11 @@
     width: 52%; aspect-ratio: 1; border-radius: 50%; z-index: 0;
     background: radial-gradient(circle, var(--teal-light), rgba(238,244,243,0) 70%);
   }
-  .hero-collage img { position: absolute; height: auto; z-index: 1; }
+  .hero-collage img {
+    position: absolute; height: auto; z-index: 1;
+    -webkit-mask-image: radial-gradient(ellipse 68% 64% at 50% 48%, #000 50%, transparent 74%);
+            mask-image: radial-gradient(ellipse 68% 64% at 50% 48%, #000 50%, transparent 74%);
+  }
   .hero-collage .ph-couple { width: 74%; top: 0; left: 0; }
   .hero-collage .ph-family { width: 82%; bottom: 0; right: 0; }
 
